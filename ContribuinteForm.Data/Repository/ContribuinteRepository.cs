@@ -11,10 +11,15 @@ namespace ContribuinteForm.Data.Repository
             Contribuintes = new List<Contribuinte>();
         }
 
+        public List<Contribuinte> GetAll() => Contribuintes;
+
+
         public Contribuinte Get(string documento) =>
             Contribuintes.Find(c => c.Documento == documento);
 
-        public List<Contribuinte> GetAll() => Contribuintes;
+
+        public void Add(Contribuinte newContribuinte) => Contribuintes.Add(newContribuinte);
+
 
         public List<Contribuinte> Update(string documento, Contribuinte newContribuinte)
         {
