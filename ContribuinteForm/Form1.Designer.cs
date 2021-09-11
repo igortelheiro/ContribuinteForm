@@ -1,4 +1,6 @@
-﻿namespace ContribuinteForm
+﻿using System.Windows.Forms;
+
+namespace ContribuinteForm
 {
     partial class Contribuinte
     {
@@ -28,159 +30,151 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pessoaJuridica = new System.Windows.Forms.CheckBox();
-            this.pessoaFisica = new System.Windows.Forms.CheckBox();
+            this.identificacaoLabel = new System.Windows.Forms.Label();
+            this.documentoLabel = new System.Windows.Forms.Label();
+            this.cartaoLabel = new System.Windows.Forms.Label();
+            this.identificacaoInput = new System.Windows.Forms.TextBox();
+            this.cartaoInput = new System.Windows.Forms.TextBox();
+            this.documentoInput = new System.Windows.Forms.MaskedTextBox();
+            this.addButton = new System.Windows.Forms.Button();
+            this.removeButton = new System.Windows.Forms.Button();
+            this.tipoPessoaSelect = new System.Windows.Forms.ComboBox();
+            this.tipoPessoaLabel = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // identificacaoLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(69, 29);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Identificação";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.identificacaoLabel.AutoSize = true;
+            this.identificacaoLabel.Location = new System.Drawing.Point(101, 87);
+            this.identificacaoLabel.Name = "identificacaoLabel";
+            this.identificacaoLabel.Size = new System.Drawing.Size(87, 17);
+            this.identificacaoLabel.TabIndex = 1;
+            this.identificacaoLabel.Text = "Identificação";
             // 
-            // label2
+            // documentoLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(71, 94);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(27, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "CPF";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+            this.documentoLabel.AutoSize = true;
+            this.documentoLabel.Location = new System.Drawing.Point(101, 229);
+            this.documentoLabel.Name = "documentoLabel";
+            this.documentoLabel.Size = new System.Drawing.Size(34, 17);
+            this.documentoLabel.TabIndex = 2;
+            this.documentoLabel.Text = "CPF";
             // 
-            // label3
+            // cartaoLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(71, 162);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "CNPJ";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.cartaoLabel.AutoSize = true;
+            this.cartaoLabel.Location = new System.Drawing.Point(101, 302);
+            this.cartaoLabel.Name = "cartaoLabel";
+            this.cartaoLabel.Size = new System.Drawing.Size(50, 17);
+            this.cartaoLabel.TabIndex = 6;
+            this.cartaoLabel.Text = "Cartão";
             // 
-            // label4
+            // identificacaoInput
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(71, 228);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Cartão";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
+            this.identificacaoInput.Location = new System.Drawing.Point(101, 106);
+            this.identificacaoInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.identificacaoInput.Name = "identificacaoInput";
+            this.identificacaoInput.Size = new System.Drawing.Size(233, 22);
+            this.identificacaoInput.TabIndex = 0;
+            this.identificacaoInput.TextChanged += new System.EventHandler(this.identificacaoInput_TextChanged);
             // 
-            // textBox1
+            // cartaoInput
             // 
-            this.textBox1.Location = new System.Drawing.Point(71, 45);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(176, 20);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.cartaoInput.Location = new System.Drawing.Point(101, 320);
+            this.cartaoInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cartaoInput.Name = "cartaoInput";
+            this.cartaoInput.Size = new System.Drawing.Size(233, 22);
+            this.cartaoInput.TabIndex = 7;
+            this.cartaoInput.TextChanged += new System.EventHandler(this.cartaoInput_TextChanged);
             // 
-            // textBox4
+            // documentoInput
             // 
-            this.textBox4.Location = new System.Drawing.Point(71, 243);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(176, 20);
-            this.textBox4.TabIndex = 7;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.documentoInput.BackColor = System.Drawing.SystemColors.Window;
+            this.documentoInput.Location = new System.Drawing.Point(101, 248);
+            this.documentoInput.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.documentoInput.Mask = "000,000,000-00";
+            this.documentoInput.Name = "documentoInput";
+            this.documentoInput.Size = new System.Drawing.Size(233, 22);
+            this.documentoInput.TabIndex = 8;
+            this.documentoInput.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.documentoInput_MaskInputRejected);
             // 
-            // maskedTextBox1
+            // addButton
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(71, 110);
-            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.maskedTextBox1.Mask = "000,000,000-0";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(176, 20);
-            this.maskedTextBox1.TabIndex = 8;
-            this.maskedTextBox1.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.maskedTextBox1_MaskInputRejected);
+            this.addButton.Location = new System.Drawing.Point(150, 413);
+            this.addButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.addButton.Name = "addButton";
+            this.addButton.Size = new System.Drawing.Size(99, 37);
+            this.addButton.TabIndex = 10;
+            this.addButton.Text = "Adicionar";
+            this.addButton.UseVisualStyleBackColor = true;
+            this.addButton.Click += new System.EventHandler(this.addButton_Click);
             // 
-            // maskedTextBox2
+            // removeButton
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(71, 177);
-            this.maskedTextBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.maskedTextBox2.Mask = "00.000.000/0000-00";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(176, 20);
-            this.maskedTextBox2.TabIndex = 9;
+            this.removeButton.Location = new System.Drawing.Point(746, 413);
+            this.removeButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.removeButton.Name = "removeButton";
+            this.removeButton.Size = new System.Drawing.Size(99, 37);
+            this.removeButton.TabIndex = 14;
+            this.removeButton.Text = "Remover";
+            this.removeButton.UseVisualStyleBackColor = true;
+            this.removeButton.Click += new System.EventHandler(this.removeButton_Click);
             // 
-            // button1
+            // tipoPessoaSelect
             // 
-            this.button1.Location = new System.Drawing.Point(254, 298);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(74, 30);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Salvar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.tipoPessoaSelect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.tipoPessoaSelect.FormattingEnabled = true;
+            this.tipoPessoaSelect.Location = new System.Drawing.Point(101, 177);
+            this.tipoPessoaSelect.Name = "tipoPessoaSelect";
+            this.tipoPessoaSelect.Size = new System.Drawing.Size(233, 24);
+            this.tipoPessoaSelect.TabIndex = 15;
+            this.tipoPessoaSelect.SelectedIndexChanged += new System.EventHandler(this.tipoPessoaSelect_SelectedIndexChanged);
             // 
-            // pessoaJuridica
+            // tipoPessoaLabel
             // 
-            this.pessoaJuridica.AutoSize = true;
-            this.pessoaJuridica.Location = new System.Drawing.Point(319, 177);
-            this.pessoaJuridica.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pessoaJuridica.Name = "pessoaJuridica";
-            this.pessoaJuridica.Size = new System.Drawing.Size(102, 17);
-            this.pessoaJuridica.TabIndex = 11;
-            this.pessoaJuridica.Text = "Pessoa Jurídica";
-            this.pessoaJuridica.UseVisualStyleBackColor = true;
-            this.pessoaJuridica.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.tipoPessoaLabel.AutoSize = true;
+            this.tipoPessoaLabel.Location = new System.Drawing.Point(101, 157);
+            this.tipoPessoaLabel.Name = "tipoPessoaLabel";
+            this.tipoPessoaLabel.Size = new System.Drawing.Size(107, 17);
+            this.tipoPessoaLabel.TabIndex = 16;
+            this.tipoPessoaLabel.Text = "Tipo de Pessoa";
             // 
-            // pessoaFisica
+            // dataGridView1
             // 
-            this.pessoaFisica.AutoSize = true;
-            this.pessoaFisica.Checked = true;
-            this.pessoaFisica.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.pessoaFisica.Location = new System.Drawing.Point(319, 110);
-            this.pessoaFisica.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pessoaFisica.Name = "pessoaFisica";
-            this.pessoaFisica.Size = new System.Drawing.Size(93, 17);
-            this.pessoaFisica.TabIndex = 12;
-            this.pessoaFisica.Text = "Pessoa Física";
-            this.pessoaFisica.UseVisualStyleBackColor = true;
-            this.pessoaFisica.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(509, 87);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(599, 305);
+            this.dataGridView1.TabIndex = 17;
             // 
             // Contribuinte
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(566, 350);
-            this.Controls.Add(this.pessoaFisica);
-            this.Controls.Add(this.pessoaJuridica);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.maskedTextBox2);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1173, 493);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.tipoPessoaLabel);
+            this.Controls.Add(this.tipoPessoaSelect);
+            this.Controls.Add(this.removeButton);
+            this.Controls.Add(this.addButton);
+            this.Controls.Add(this.cartaoInput);
+            this.Controls.Add(this.cartaoLabel);
+            this.Controls.Add(this.documentoLabel);
+            this.Controls.Add(this.identificacaoInput);
+            this.Controls.Add(this.identificacaoLabel);
+            this.Controls.Add(this.documentoInput);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Contribuinte";
             this.Text = "Contribuinte";
             this.Load += new System.EventHandler(this.Contribuinte_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -188,17 +182,17 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.CheckBox pessoaJuridica;
-        private System.Windows.Forms.CheckBox pessoaFisica;
+        private System.Windows.Forms.Label identificacaoLabel;
+        private System.Windows.Forms.Label tipoPessoaLabel;
+        private System.Windows.Forms.Label documentoLabel;
+        private System.Windows.Forms.Label cartaoLabel;
+        private System.Windows.Forms.TextBox identificacaoInput;
+        private System.Windows.Forms.ComboBox tipoPessoaSelect;
+        private System.Windows.Forms.MaskedTextBox documentoInput;
+        private System.Windows.Forms.TextBox cartaoInput;
+        private System.Windows.Forms.Button addButton;
+        private System.Windows.Forms.Button removeButton;
+        private DataGridView dataGridView1;
     }
 }
 
