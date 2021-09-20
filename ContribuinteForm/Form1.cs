@@ -35,11 +35,6 @@ namespace ContribuinteForm
             dataGridView1.ResetBindings();
         }
 
-        private void identificacaoInput_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void tipoPessoaSelect_SelectedIndexChanged(object sender, EventArgs e)
         {
             var tipoPessoa = (TipoContribuinte)tipoPessoaSelect.SelectedItem;
@@ -51,16 +46,6 @@ namespace ContribuinteForm
             }
             documentoLabel.Text = "CPF";
             documentoInput.Mask = "000,000,000-00";
-        }
-
-        private void documentoInput_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        private void cartaoInput_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void addButton_Click(object sender, EventArgs e)

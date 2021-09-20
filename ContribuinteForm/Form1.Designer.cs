@@ -78,7 +78,6 @@ namespace ContribuinteForm
             this.identificacaoInput.Name = "identificacaoInput";
             this.identificacaoInput.Size = new System.Drawing.Size(233, 22);
             this.identificacaoInput.TabIndex = 0;
-            this.identificacaoInput.TextChanged += new System.EventHandler(this.identificacaoInput_TextChanged);
             // 
             // cartaoInput
             // 
@@ -87,7 +86,6 @@ namespace ContribuinteForm
             this.cartaoInput.Name = "cartaoInput";
             this.cartaoInput.Size = new System.Drawing.Size(233, 22);
             this.cartaoInput.TabIndex = 7;
-            this.cartaoInput.TextChanged += new System.EventHandler(this.cartaoInput_TextChanged);
             // 
             // documentoInput
             // 
@@ -98,7 +96,6 @@ namespace ContribuinteForm
             this.documentoInput.Name = "documentoInput";
             this.documentoInput.Size = new System.Drawing.Size(233, 22);
             this.documentoInput.TabIndex = 8;
-            this.documentoInput.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.documentoInput_MaskInputRejected);
             // 
             // addButton
             // 
