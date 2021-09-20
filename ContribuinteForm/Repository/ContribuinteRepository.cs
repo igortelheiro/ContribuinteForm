@@ -5,44 +5,44 @@ namespace ContribuinteForm.Repository
 {
     public class ContribuinteRepository
     {
-        private readonly List<ContribuinteModel> _contribuintes;
+        public readonly List<ContribuinteModel> Contribuintes;
 
         public ContribuinteRepository()
         {
-            _contribuintes = new List<ContribuinteModel>();
+            Contribuintes = new List<ContribuinteModel>();
         }
 
-        public List<ContribuinteModel> GetAll() => _contribuintes;
+        public List<ContribuinteModel> GetAll() => Contribuintes;
 
 
         public ContribuinteModel Get(string documento) =>
-            _contribuintes.Find(c => c.Documento == documento);
+            Contribuintes.Find(c => c.Documento == documento);
 
 
-        public void Add(ContribuinteModel newContribuinte) => _contribuintes.Add(newContribuinte);
+        public void Add(ContribuinteModel newContribuinte) => Contribuintes.Add(newContribuinte);
 
 
         public List<ContribuinteModel> Update(string documento, ContribuinteModel newContribuinte)
         {
             var oldContribuinte = Get(documento);
-            _contribuintes.Remove(oldContribuinte);
-            _contribuintes.Add(newContribuinte);
+            Contribuintes.Remove(oldContribuinte);
+            Contribuintes.Add(newContribuinte);
             
-            return _contribuintes;
+            return Contribuintes;
         }
 
         public List<ContribuinteModel> Delete(string documento)
         {
             var contribuinte = Get(documento);
-            _contribuintes.Remove(contribuinte);
+            Contribuintes.Remove(contribuinte);
             
-            return _contribuintes;
+            return Contribuintes;
         }
 
         public List<ContribuinteModel> Delete(ContribuinteModel contribuinte)
         {
-            _contribuintes.Remove(contribuinte);
-            return _contribuintes;
+            Contribuintes.Remove(contribuinte);
+            return Contribuintes;
         }
     }
 }

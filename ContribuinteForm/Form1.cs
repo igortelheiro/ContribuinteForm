@@ -31,10 +31,7 @@ namespace ContribuinteForm
             dataGridView1.AutoGenerateColumns = true;
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             
-            _contribuinteRepository.Add(new ContribuinteModel() { Identificacao = "Igor" });
-            _contribuinteRepository.Add(new ContribuinteModel() { Identificacao = "Pedro" });
-
-            dataGridView1.DataSource = new BindingSource(_contribuinteRepository, null);
+            dataGridView1.DataSource = new BindingSource(_contribuinteRepository.Contribuintes, null);
             dataGridView1.ResetBindings();
         }
 
@@ -72,7 +69,7 @@ namespace ContribuinteForm
             {
                 Identificacao = identificacaoInput.Text,
                 TipoContribuinte = (TipoContribuinte)tipoPessoaSelect.SelectedItem,
-                Documento = documentoInput.Text,
+                Documento = documentoInput.Text.Replace(".", string.Empty).Replace("-", string.Empty).Trim(),
                 Cartao = cartaoInput.Text
             };
             AddContribuinte(newContribuinte);
@@ -82,7 +79,7 @@ namespace ContribuinteForm
         private void AddContribuinte(ContribuinteModel newContribuinte)
         {
             _contribuinteRepository.Add(newContribuinte);
-            dataGridView1.ResetBindings();
+            ConfigDataGridView();
         }
 
         private void ClearForm()
@@ -95,13 +92,10 @@ namespace ContribuinteForm
 
         private void removeButton_Click(object sender, EventArgs e)
         {
-            
-        }
-
-        private void RemoveContribuinte(string documentoContribuinte)
-        {
-            _contribuinteRepository.Delete(documentoContribuinte);
-            dataGridView1.ResetBindings();
+            var isAnyRowSelected = dataGridView1.SelectedRows.Count > 0;
+            var hasContribuintes = _contribuinteRepository.Contribuintes.Count > 0;
+            if (!isAnyRowSelected || !hasContribuintes) return;
+            dataGridView1.Rows.RemoveAt(dataGridView1.SelectedRows[0].Index);
         }
     }
 }
